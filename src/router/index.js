@@ -1,30 +1,62 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Router from "vue-router";
+import pageHome from "components/pages/pageHome";
+import indexHome from "components/index/indexHome";
+import enterPage from "components/index/enterPage";
+import product from "components/pages/singlePage/product";
+import partner from "components/pages/singlePage/partner";
+import about from "components/pages/singlePage/about";
+import news from "components/pages/singlePage/news";
+import connect from "components/pages/singlePage/connect";
 
-Vue.use(VueRouter);
+Vue.use(Router)
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
-];
-
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
-});
-
-export default router;
+export default new Router({
+  routes: [
+        {
+          path: "/",
+          name: "enterPage",
+          component:enterPage,
+        }, 
+        {
+          path:"/indexHome",
+          name:"indexHome",
+          component:indexHome,
+        },
+        {
+          path: "/pageHome",
+          name: "pageHome",
+          component:pageHome,
+          children:[
+            {
+              path: "product",
+              name: "product",
+              component: product,
+            },
+            {
+              path: "partner",
+              name: "partner",
+              component: partner,
+            },
+            {
+              path: "news",
+              name: "news",
+              component: news,
+            }, 
+            {
+              path: "about",
+              name: "about",
+              component:about,
+            },
+            {
+              path: "connect",
+              name: "connect",
+              component:connect,
+            },
+          ]
+        },
+       
+        
+  ],
+  mode:"hash"
+})

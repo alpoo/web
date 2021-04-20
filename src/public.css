@@ -1,0 +1,205 @@
+/* public css */
+html,body{
+    padding: 0;
+    margin: 0;
+} 
+img{
+    width:100%;
+    height:100%;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.el-menu--horizontal>.el-submenu .el-submenu__title{
+    background-color: #1661ab;
+}
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title{
+    background-color: #1661ab;
+}
+el-menu--horizontal>.el-submenu .el-submenu__title{
+    background-color: #1661ab;
+}
+.headtitle{
+    font-size: 30px;
+    color:rgb(100, 97, 97);
+    letter-spacing: 4px;
+    font-weight: 600;
+    display:inline-block;
+}
+/* flex不知宽高居中 */
+.flex-center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/* position不知宽高居中 */
+.stra-center{
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform:translate(-50%,-50%);
+}
+.title{
+    letter-spacing: 2px;
+    font-size: 23px;
+    text-shadow: 3px 4px #ccc;;
+    height: 120px;
+    line-height: 120px;
+    margin: 0 auto;
+}
+.topTo{
+    animation: topTo 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
+    animation-fill-mode: forwards;/*定义动画结束的状态*/
+}
+.rightTo{
+    animation:rightTo 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
+    animation-fill-mode: forwards;/*定义动画结束的状态*/
+    animation-delay: 1s;
+}
+.iconSize{
+    width:15px;
+    height: 15px;
+    display: inline-block;
+}
+@keyframes topTo{/*定义从右边滑入文字的动画*/
+    0%{transform: translateY(-30px);opacity: 0;}
+    100%{transform:translateY(0px);opacity: 1; }
+}
+@keyframes runX{
+    0%{transform: translateX(-20px);opacity: 1;}
+    20%{transform:translateX(20px);opacity: 1; }
+    100%{transform:translateX(-20px);opacity: 0.8; }
+}
+@keyframes rightTo{
+    0%{transform: translateX(-30px);opacity: 0;}
+    100%{transform:translateX(0px);opacity: 1; }
+}
+/* wave start*/
+.section {
+    position: relative;
+    text-align: center;
+}
+
+.wave-effect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;
+    overflow: hidden;
+}
+.shape-one {
+    z-index: 15;
+    opacity: 0.5;
+}
+.shape-two {
+    z-index: 10;
+    opacity: 0.75;
+}
+.shape-three {
+    z-index: 5;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.waves-shape {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.wave-one {
+    background-size: 50% 100px;
+    background-image: url('../static/image/wave-shape/wave1.png');
+}
+
+.wave-anim .wave-one {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.wave-two {
+    background-size: 50% 90px;
+    background-image: url('../static/image/wave-shape/wave2.png');
+}
+.wave-anim .wave-two {
+    animation: move_wave 10s linear infinite;
+}
+.wave-three {
+    background-size: 50% 90px;
+    background-image: url('../static/image/wave-shape/wave3.png');
+}
+.wave-anim .wave-three {
+    animation: move_wave 15s linear infinite;
+}
+
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-50%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+}
+/* home wave-effect end*/
+
+/* home */
+
+.home-half {
+    padding-bottom: 60px;
+    padding-top: 20px;
+    /* background-color:#1661ab ; */
+}
+
+.bg-home {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.home-small-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px;
+    color:#aaa;
+}
+.home-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 50px;
+    color:#ccc;
+}
+.icon{
+  height: 150px;
+  line-height: 150px;
+  display: inline-block;
+  vertical-align:middle;
+  color:#fff;
+  font-size:30px ;
+  animation: masked-animation 4s infinite linear;
+  font-family:Chaparral Pro Light;
+}
+.icon img{
+  width:30px;
+  height:30px
+}
+
+/* home */
