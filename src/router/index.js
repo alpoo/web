@@ -8,6 +8,7 @@ import partner from "components/pages/singlePage/partner";
 import about from "components/pages/singlePage/about";
 import news from "components/pages/singlePage/news";
 import connect from "components/pages/singlePage/connect";
+import news_content from 'components/common/news_content'
 
 Vue.use(Router)
 
@@ -20,7 +21,7 @@ export default new Router({
         }, 
         {
           path:"/indexHome",
-          name:"indexHome",
+          name:"首页",
           component:indexHome,
         },
         {
@@ -30,27 +31,31 @@ export default new Router({
           children:[
             {
               path: "product",
-              name: "product",
+              name: "产品展示",
               component: product,
+            }, {
+              path: "newscontent",
+              name: "新闻资讯",
+              component: news_content,
             },
             {
               path: "partner",
-              name: "partner",
+              name: "合作伙伴",
               component: partner,
             },
             {
               path: "news",
-              name: "news",
+              name: "最新资讯",
               component: news,
             }, 
             {
               path: "about",
-              name: "about",
+              name: "关于我们",
               component:about,
             },
             {
               path: "connect",
-              name: "connect",
+              name: "联系我们",
               component:connect,
             },
           ]

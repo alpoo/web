@@ -1,7 +1,8 @@
 
 <template>
-    <div :style="{backgroundImage:'url('+require(`image/index-image/tech${i}.jpg`)}">
+    <div class="backimg" :style="{backgroundImage:'url('+require(`image/index-image/tech${i}.jpg`)}">
         <tab></tab>
+        <div style="height:100px"></div>
         <div>
             <section class="flex-center section bg-home home-half">
             <div >
@@ -39,21 +40,24 @@ export default {
     },
     data(){
         return{
-        i:1,
+        i:4,
         }
     },
     created(){
-        setInterval(()=>{
-            this.i++;
-            if(this.i>3)this.i=1
-        },2000)
+        // setInterval(()=>{
+        //     this.i++;
+        //     if(this.i>4)this.i=1
+        // },5000)
     },
     mounted(){
     }
 }
 </script>
 <style scope>
-
+.backimg{
+background-repeat: no-repeat;
+background-size: cover;
+}
 </style>
 
 

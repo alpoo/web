@@ -1,21 +1,5 @@
 <template>
     <div style="width:100%;">
-        <!-- <el-row>
-            <el-col :span="9" class="flex-center">
-            <div class="icon">
-                <img src="~image/1.png" alt="">
-                <span>上海鸣野信息科技</span>
-            </div>
-            </el-col> 
-            <el-col :span="12" class="spans flex-center">
-                <router-link to='/indexHome'>网站首页</router-link>
-                <router-link to='/pageHome/about'>关于我们</router-link>
-                <router-link to="/pageHome/product">产品展示</router-link>
-                <router-link to='/pageHome/partner'>合作伙伴</router-link>
-                <router-link to='/pageHome/news'>行业资讯</router-link>
-                <router-link to='/pageHome/connect'>联系我们</router-link>
-            </el-col>
-        </el-row> -->
         <div class="solvetab"> 
             <div :class="{'tab':true,'flex-center':true,'scroll':barshow}">
                 <div class="icon"  style="width:30%;">
@@ -95,6 +79,8 @@ img{
 }
 .scroll{
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px 5px #eee;
+    height: 70px;
 }
 .scroll .icon{
     color: #1661ab;
@@ -105,7 +91,7 @@ img{
 .spans a:hover{
     border-radius: 20px;
     font-size: 17px;
-    border: 2px solid #2775b6;
+    border: 1px solid #d0dfe6;
     border-radius: 20px;
     background-color: #fff;
     color:#1661ab;
@@ -114,7 +100,7 @@ img{
     background-color:#d0dfe6;
     text-decoration: none;
     font-size: 17px;
-    border: 2px solid #2775b6;
+    border: 2px solid #bac0c5;
     border-radius: 20px;
     background-color: #fff;
     color:#1661ab;

@@ -12,6 +12,7 @@ module.exports={
         .set('commonjs',resolve('./src/commonjs'))
         .set('network',resolve('./src/network'))
         .set('common', resolve('./src/components/common'))
-        .set('image',resolve('./static/image'))
+        .set('image', resolve('./static/image'))
+        .set('static', resolve('./static'))
     }
 }

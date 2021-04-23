@@ -28,7 +28,7 @@ export default{
         setTimeout(()=>{
             this.$router.push('/indexHome')
         },3000)
-    }
+    },
 }
 </script>
 <style>

@@ -43,6 +43,10 @@ VueAMap.initAMapApiLoader({
 router.afterEach(() => {
   window.scrollTo(0, 0);
 });
+router.beforeEach((to, from, next) => {
+  document.title = to.name ? `上海鸣野信息科技-${to.name}`  : "上海鸣野信息科技"
+  next()
+ })
 new Vue({
   router,
   render: (h) => h(App),

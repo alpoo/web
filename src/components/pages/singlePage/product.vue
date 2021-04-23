@@ -41,18 +41,18 @@
                 <div>
             <div class="title flex-center" style="text-align:left;font-size:28px;font-weight:bold;color:#39393a;">上海市各区县用水定额系统</div>
             <div class="areas flex-center">
-                <div class="img-box">
+                <div class="img-box wow bounceIn">
                 <img src="~image/product/JS.jpg" alt="">
                 </div>
-                <div class="img-box">
+                <div class="img-box wow bounceIn">
                 <img src="~image/product/QP.jpg" alt="">
                 </div>
             </div>
             <div class="areas flex-center">
-                <div class="img-box">
+                <div class="img-box wow bounceIn">
                 <img src="~image/product/LG.jpg" alt="">
                 </div>
-                <div class="img-box">
+                <div class="img-box wow bounceIn">
                 <img src="~image/product/CM.jpg" alt="">
                 </div>
             </div>
@@ -79,6 +79,18 @@ export default{
 </script>
 
 <style scope>
+.areas ::before{
+    content:'';
+    height: 50px;
+    width: 50px;
+    font-size: 15px;
+    position: absolute;
+    z-index: 400;
+    background-size: contain;
+}
+.areas ::before:hover {
+    transform: rotate(0deg);
+}
 .areas{
     height: 500px;
     width: 100%;
@@ -160,7 +172,8 @@ export default{
     margin:0 auto;
     position: relative;
     box-shadow: -5px -5px 10px #ccc;
-    background: rgba(245, 240, 240, 0.867);
+    background-image:linear-gradient(135deg,#d5d7da,#fff);
+    /* background: rgba(245, 240, 240, 0.867); */
 }
 .img-box img{
     position: absolute;
